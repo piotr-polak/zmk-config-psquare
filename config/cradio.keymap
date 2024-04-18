@@ -152,7 +152,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trqns         &kp C_PLAY  &kp C_PAUSE
+                                             &trans     &trans         &kp C_PLAY  &kp C_PAUSE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
