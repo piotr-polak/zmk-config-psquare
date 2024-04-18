@@ -82,17 +82,17 @@
 
         // NAV
 
-        right_layer {
+        nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │          │ _        │ $        │ {        │  }       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &trans     &kp UNDER  &kp DLLR  &kp LBRC    &kp RBRC
+        //│          │          │          │          │          │   │          │ _        │ $        │ {        │  }       │
+            &trans     &trans      &trans    &trans     &trans         &trans     &kp UNDER  &kp DLLR  &kp LBRC    &kp RBRC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &trans     &kp LARW   &kp DARW   &kp UARW   &kp RARW
+        //│          │          │          │          │          │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
+            &trans      &trans     &trans     &trans    &trans         &trans     &kp LARW   &kp DARW   &kp UARW   &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │ HOME     │ PAGE UP  │ PAGE DN  │ END      │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &kp HOME   &kp PG_UP  &kp PG_DN &kp END
+        //│          │          │          │          │          │   │          │ HOME     │ PAGE UP  │ PAGE DN  │ END      │
+           &trans      &trans      &trans    &trans      &trans        &trans     &kp HOME   &kp PG_UP  &kp PG_DN &kp END
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans        &kp INS     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -101,7 +101,7 @@
 
         // SYM
 
-        left_layer {
+        sym_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ &        │ #        │  (       │  )       │ %        │   │  *       │ |        │          │          │          │
@@ -120,7 +120,7 @@
 
         // NUM
 
-        tri_layer {
+        num_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ /        │ 7        │ 8        │ 9        │ +        │   │          │          │          │          │  RESET   │
