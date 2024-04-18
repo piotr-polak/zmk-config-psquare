@@ -15,6 +15,7 @@
 #define NAV 1
 #define SYM 2
 #define NUM 3
+#define MED 4
 
 / {
     behaviors {
@@ -75,7 +76,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt NAV SPACE &kp TAB    &lt SYM ENTER &lt NUM BSPC
+                                        &lt NAV SPACE &lt MED TAB    &lt SYM ENTER &lt NUM BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -123,11 +124,11 @@
         num_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ /        │ 7        │ 8        │ 9        │ +        │   │          │          │          │          │  RESET   │
-           &kp FSLH    &kp N7     &kp N8     &kp N9    &kp PLUS        &trans     &trans     &trans     &trans    &sys_reset
+        //│ /        │ 7        │ 8        │ 9        │ +        │   │          │          │          │ BOOTLOAD │  RESET   │
+           &kp FSLH    &kp N7     &kp N8     &kp N9    &kp PLUS        &trans     &trans     &trans     &bootloader &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ *        │ 4        │ 5        │ 6        │ -        │   │          │          │          │          │BOOTLOADER│
-            &kp STAR   &kp N4     &kp N5     &kp N6    &kp MINUS       &trans     &trans     &trans     &trans    &bootloader
+        //│ *        │ 4        │ 5        │ 6        │ -        │   │          │          │          │          │          │
+            &kp STAR   &kp N4     &kp N5     &kp N6    &kp MINUS       &trans     &kp RSHIFT &kp RCTL   &kp RALT   &kp RGUI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ,        │ 1        │ 2        │ 3        │.         │   │          │          │          │          │          │
             &kp COMMA  &kp N1     &kp N2      &kp N3    &kp DOT         &trans     &trans     &trans     &trans     &trans
@@ -136,5 +137,25 @@
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
+
+        // MED
+
+        med_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+           &trans      &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans     &trans     &trans         &kp C_MUTE &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP  &kp C_NEXT
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trqns         &kp C_PLAY  &kp C_PAUSE
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
     };
 };
