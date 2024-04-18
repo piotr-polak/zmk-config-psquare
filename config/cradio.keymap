@@ -11,6 +11,11 @@
 #define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RCTRL k2  &ht RALT k3  &ht RGUI k4
 //#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
+#define DEF 0
+#define NAV 1
+#define SYM 2
+#define NUM 3
+
 / {
     behaviors {
         ht: hold_tap {
@@ -24,13 +29,13 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+//    conditional_layers {
+//        compatible = "zmk,conditional-layers";
+//        tri_layer {
+//            if-layers = <1 2 3>;
+//            then-layer = <3>;
+//        };
+//    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -46,13 +51,12 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 1 SPACE   &kp TAB     &lt 2 ENTER  &lt 3 BSPC
+                                            &lt NAV SPACE &kp TAB    &lt SYM ENTER &lt NUM BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-        //                                    NAVI                      SYMBOL     NUMBER
             >;
         };
 
-        // NAVI
+        // NAV
 
         right_layer {
             bindings = <
@@ -71,7 +75,7 @@
             >;
         };
 
-        // SYMBOL
+        // SYM
 
         left_layer {
             bindings = <
@@ -90,7 +94,7 @@
             >;
         };
 
-        // NUMBER
+        // NUM
 
         tri_layer {
             bindings = <
