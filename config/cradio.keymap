@@ -57,14 +57,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ CUT      │ _        │ $        │ {        │  }       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp K_CUT  &kp UNDER  &kp DLLR  &kp LBRC    &kp RBRC
+        //│ INSERT   │  1       │  2       │  3       │          │   │          │ _        │ $        │ {        │  }       │
+            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &trans     &kp UNDER  &kp DLLR  &kp LBRC    &kp RBRC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ COPY     │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp K_COPY   &kp LARW   &kp DARW   &kp UARW   &kp RARW
+        //│ DELETE   │  4       │  5       │  6       │          │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
+            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &trans     &kp LARW   &kp DARW   &kp UARW   &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │ PAST     │ HOME     │ PAGE UP  │ PAGE DN  │ END      │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &kp K_PASTE     &kp HOME   &kp PG_UP  &kp PG_DN &KP END
+        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │ HOME     │ PAGE UP  │ PAGE DN  │ END      │
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &kp HOME   &kp PG_UP  &kp PG_DN &KP END
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans        &kp INS     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -104,7 +104,7 @@
         //│ ,        │ 1        │ 2        │ 3        │.         │   │          │          │          │          │          │
             &kp COMMA  &kp N1     &kp 2      &kp N3    &kp DOT         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp N0     &kp EQUAL         &trans     &trans
+                                             &kp N0     &kp EQUAL       &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
