@@ -89,7 +89,7 @@
             &trans     &trans      &trans    &trans     &trans         &trans     &kp UNDER  &kp DLLR  &kp LBRC    &kp RBRC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            &trans      &trans     &trans     &trans    &trans         &trans     &kp LARW   &kp DARW   &kp UARW   &kp RARW
+            &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT &trans         &trans     &kp LARW   &kp DARW   &kp UARW   &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │ HOME     │ PAGE UP  │ PAGE DN  │ END      │
            &trans      &trans      &trans    &trans      &trans        &trans     &kp HOME   &kp PG_UP  &kp PG_DN &kp END
