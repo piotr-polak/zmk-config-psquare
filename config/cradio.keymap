@@ -106,7 +106,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ &        │ #        │  (       │  )       │ %        │   │  *       │ |        │          │          │          │
-            &kp AMPS   &kp LBKT   &kp LPAR   &kp RPAR   &kp PRCNT      &kp STAR  &kp PIPE   &trans     &trans     &trans
+            &kp AMPS   &kp HASH    &kp LPAR   &kp RPAR   &kp PRCNT      &kp STAR  &kp PIPE   &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ^        │  $       │  {       │  }       │  /       │   │  \       │          │          │          │          │
             &kp CARET   &kp DLLR   &kp LBRC   &kp RBRC   &kp FSLH      &kp BSLH  &trans      &trans     &trans     &trans
